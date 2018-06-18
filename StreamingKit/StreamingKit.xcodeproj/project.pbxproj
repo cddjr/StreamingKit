@@ -55,20 +55,6 @@
 			remoteGlobalIDString = A1A49968189E744400E2A2E2;
 			remoteInfo = StreamingKitMac;
 		};
-		A1A499E6189E769A00E2A2E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A1A499A1189E765800E2A2E2;
-			remoteInfo = ExampleAppMac;
-		};
-		A1A499E8189E769A00E2A2E2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A1A499C2189E765800E2A2E2;
-			remoteInfo = ExampleAppMacTests;
-		};
 		A1E7C4DE188D57F60010896F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A1E7C4C0188D57F50010896F /* Project object */;
@@ -103,7 +89,6 @@
 		A1A49982189E744500E2A2E2 /* StreamingKitMacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreamingKitMacTests-Info.plist"; sourceTree = "<group>"; };
 		A1A49984189E744500E2A2E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A1A49986189E744500E2A2E2 /* StreamingKitMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamingKitMacTests.m; sourceTree = "<group>"; };
-		A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExampleAppMac.xcodeproj; path = ../ExampleAppMac/ExampleAppMac.xcodeproj; sourceTree = "<group>"; };
 		A1A499F6189E79EA00E2A2E2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A1BF65D0189A6582004DD08C /* STKQueueEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKQueueEntry.h; sourceTree = "<group>"; };
 		A1BF65D1189A6582004DD08C /* STKQueueEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STKQueueEntry.m; sourceTree = "<group>"; };
@@ -220,15 +205,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A1A499E2189E769A00E2A2E2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A1A499E7189E769A00E2A2E2 /* ExampleAppMac.app */,
-				A1A499E9189E769A00E2A2E2 /* ExampleAppMacTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A1E7C4BF188D57F50010896F = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +214,6 @@
 				A1A49980189E744500E2A2E2 /* StreamingKitMacTests */,
 				A1E7C4CA188D57F50010896F /* Frameworks */,
 				A1E7C4C9188D57F50010896F /* Products */,
-				A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -438,12 +413,6 @@
 			mainGroup = A1E7C4BF188D57F50010896F;
 			productRefGroup = A1E7C4C9188D57F50010896F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A1A499E2189E769A00E2A2E2 /* Products */;
-					ProjectRef = A1A499E1189E769A00E2A2E2 /* ExampleAppMac.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A1E7C4C7188D57F50010896F /* StreamingKit */,
@@ -453,23 +422,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		A1A499E7189E769A00E2A2E2 /* ExampleAppMac.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = ExampleAppMac.app;
-			remoteRef = A1A499E6189E769A00E2A2E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A1A499E9189E769A00E2A2E2 /* ExampleAppMacTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ExampleAppMacTests.xctest;
-			remoteRef = A1A499E8189E769A00E2A2E2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A1A49978189E744500E2A2E2 /* Resources */ = {
