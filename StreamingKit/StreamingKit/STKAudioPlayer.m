@@ -209,6 +209,7 @@ static AudioStreamBasicDescription recordAudioStreamBasicDescription;
 @interface STKAudioPlayer()
 {
 	BOOL muted;
+    BOOL mutedSpeaker;
 	
     UInt8* readBuffer;
     int readBufferSize;
@@ -1856,6 +1857,16 @@ static void AudioFileStreamPacketsProc(void* clientData, UInt32 numberBytes, UIn
 	self->muted = value;
 }
 
+-(BOOL) mutedSpeaker
+{
+    return self->mutedSpeaker;
+}
+
+-(void) setMutedSpeaker:(BOOL)value
+{
+    self->mutedSpeaker = value;
+}
+
 -(void) mute
 {
     self.muted = YES;
@@ -2840,6 +2851,7 @@ static OSStatus OutputRenderCallback(void* inRefCon, AudioUnitRenderActionFlags*
     
     BOOL waitForBuffer = NO;
 	BOOL muted = audioPlayer->muted;
+    BOOL mutedSpeaker = audioPlayer->mutedSpeaker;
     AudioBuffer* audioBuffer = audioPlayer->pcmAudioBuffer;
     UInt32 frameSizeInBytes = audioPlayer->pcmBufferFrameSizeInBytes;
     UInt32 used = audioPlayer->pcmBufferUsedFrameCount;
@@ -3042,6 +3054,13 @@ static OSStatus OutputRenderCallback(void* inRefCon, AudioUnitRenderActionFlags*
         AUGraphUpdate(audioPlayer->audioGraph, &isUpdated);
         
         isUpdated = isUpdated;
+    }
+    
+    if (!muted && mutedSpeaker)
+    {
+        //180618: 不是静音模式，但需要静音扬声器
+        size_t length = canonicalAudioStreamBasicDescription.mBytesPerFrame * inNumberFrames;
+        bzero(ioData->mBuffers[0].mData, length);
     }
 	
     if (entry == nil)

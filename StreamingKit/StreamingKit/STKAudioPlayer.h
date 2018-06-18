@@ -147,6 +147,8 @@ typedef void(^STKFrameFilter)(UInt32 channelsPerFrame, UInt32 bytesPerFrame, UIn
 @property (readwrite) Float32 volume;
 /// Gets or sets the player muted state
 @property (readwrite) BOOL muted;
+/// 是否扬声器静音
+@property (readwrite) BOOL mutedSpeaker;
 /// Gets the current item duration in seconds
 @property (readonly) double duration;
 /// Gets the current item progress in seconds
